@@ -14,10 +14,10 @@ import com.longx.intelligent.android.lib.longdialog.ui.UiThread;
 /**
  * Created by LONG on 2026/8/24 at 上午2:10.
  */
-public class ProgressOperatingDialog extends BaseDialog<ProgressOperatingDialog> {
+public class ProgressDialog extends BaseDialog<ProgressDialog> {
     private DialogProgressOperatingBinding binding;
 
-    public ProgressOperatingDialog(Activity activity) {
+    public ProgressDialog(Activity activity) {
         super(activity);
     }
 
