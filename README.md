@@ -14,7 +14,7 @@ Android Dialog 库
 
 ## 创建 Dialog
 ```java
-binding.messageDialog.setOnClickListener(view -> {
+         binding.messageDialog.setOnClickListener(view -> {
             LongDialog.newMessageDialog(this)
                     .message("这是一个消息弹窗。")
                     .okButtonText("完成")
@@ -52,14 +52,14 @@ binding.messageDialog.setOnClickListener(view -> {
                     .show();
         });
 
-        binding.operatingDialog.setOnClickListener(view -> {
-            LongDialog.newOperatingDialog(this)
+        binding.progressingDialog.setOnClickListener(view -> {
+            LongDialog.newProgressingDialog(this)
                     .create()
                     .show();
         });
 
-        binding.progressOperatingDialog.setOnClickListener(view -> {
-            ProgressOperatingDialog progressOperatingDialog =LongDialog.newProgressOperatingDialog(this)
+        binding.progressDialog.setOnClickListener(view -> {
+            ProgressDialog progressOperatingDialog =LongDialog.newProgressDialog(this)
                     .create()
                     .show();
             new Timer().schedule(new TimerTask() {
@@ -121,7 +121,7 @@ LongDialog.material3Theme();
 LongDialog.material2ThemeDayNight();
 ```
 ```java
-LongDialog.okButtonText = getString(R.string.ok);
-LongDialog.confirmText = getString(R.string.confirm_text);
+LongDialog.okButtonText = R.string.ok;
+LongDialog.confirmText = R.string.confirm_text;
 LongDialog.theme = R.style.Theme_LongDialog;
 ```
