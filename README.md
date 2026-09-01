@@ -59,7 +59,7 @@ Android Dialog 库
         });
 
         binding.progressDialog.setOnClickListener(view -> {
-            ProgressDialog progressOperatingDialog =LongDialog.newProgressDialog(this)
+            ProgressDialog progressDialog =LongDialog.newProgressDialog(this)
                     .create()
                     .show();
             new Timer().schedule(new TimerTask() {
@@ -69,17 +69,17 @@ Android Dialog 库
                     if(progress > 10000){
                         cancel();
                     }
-                    if(progressOperatingDialog.getProgress() < 3000){
-                        progressOperatingDialog.updateText("开始...");
-                    }else if(progressOperatingDialog.getProgress() < 5000){
-                        progressOperatingDialog.updateText("进行中...");
-                    }else if(progressOperatingDialog.getProgress() < 7000){
-                        progressOperatingDialog.updateText("等待中...");
+                    if(progressDialog.getProgress() < 3000){
+                        progressDialog.updateText("开始...");
+                    }else if(progressDialog.getProgress() < 5000){
+                        progressDialog.updateText("进行中...");
+                    }else if(progressDialog.getProgress() < 7000){
+                        progressDialog.updateText("等待中...");
                     }else{
-                        progressOperatingDialog.updateText("即将结束");
+                        progressDialog.updateText("即将结束");
                     }
                     progress += 500;
-                    progressOperatingDialog.updateProgress(progress, 10000);
+                    progressDialog.updateProgress(progress, 10000);
                 }
             }, 0, 500);
         });
