@@ -121,7 +121,6 @@ LongDialog.material3Theme();
 LongDialog.material2ThemeDayNight();
 ```
 ```java
-LongDialog.material2ThemeDayNight();
 LongDialog.okButtonText = getString(R.string.ok);
 LongDialog.confirmText = getString(R.string.confirm_text);
 LongDialog.theme = R.style.Theme_LongDialog;
