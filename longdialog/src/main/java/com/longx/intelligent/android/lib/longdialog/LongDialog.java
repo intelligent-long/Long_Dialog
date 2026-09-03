@@ -9,9 +9,9 @@ import com.longx.intelligent.android.lib.longdialog.dialog.ConfirmDialog;
 import com.longx.intelligent.android.lib.longdialog.dialog.InputDialog;
 import com.longx.intelligent.android.lib.longdialog.dialog.ListDialog;
 import com.longx.intelligent.android.lib.longdialog.dialog.MessageDialog;
-import com.longx.intelligent.android.lib.longdialog.dialog.ProgressingDialog;
+import com.longx.intelligent.android.lib.longdialog.dialog.OperatingDialog;
 import com.longx.intelligent.android.lib.longdialog.dialog.OptionDialog;
-import com.longx.intelligent.android.lib.longdialog.dialog.ProgressDialog;
+import com.longx.intelligent.android.lib.longdialog.dialog.ProgressOperatingDialog;
 
 /**
  * Created by LONG on 2026/8/24 at 下午10:27.
@@ -62,12 +62,12 @@ public class LongDialog {
         return new OptionDialog(activity);
     }
 
-    public static ProgressingDialog newProgressingDialog(Activity activity){
-        return new ProgressingDialog(activity);
+    public static OperatingDialog newOperatingDialog(Activity activity){
+        return new OperatingDialog(activity);
     }
 
-    public static ProgressDialog newProgressDialog(Activity activity){
-        return new ProgressDialog(activity);
+    public static ProgressOperatingDialog newProgressOperatingDialog(Activity activity){
+        return new ProgressOperatingDialog(activity);
     }
 
     public static InputDialog newInputDialog(Activity activity){

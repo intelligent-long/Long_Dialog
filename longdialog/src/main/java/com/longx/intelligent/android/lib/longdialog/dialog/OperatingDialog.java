@@ -12,10 +12,10 @@ import com.longx.intelligent.android.lib.longdialog.databinding.DialogOperatingB
 /**
  * Created by LONG on 2026/8/24 at 上午2:06.
  */
-public class ProgressingDialog extends BaseDialog<ProgressingDialog>{
+public class OperatingDialog extends BaseDialog<OperatingDialog>{
     private DialogOperatingBinding binding;
 
-    public ProgressingDialog(Activity activity) {
+    public OperatingDialog(Activity activity) {
         super(activity);
     }
 
