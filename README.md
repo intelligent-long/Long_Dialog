@@ -14,7 +14,7 @@ Android Dialog 库
 
 ## 创建 Dialog
 ```java
-         binding.messageDialog.setOnClickListener(view -> {
+        binding.messageDialog.setOnClickListener(view -> {
             LongDialog.newMessageDialog(this)
                     .message("这是一个消息弹窗。")
                     .okButtonText("完成")
@@ -52,14 +52,14 @@ Android Dialog 库
                     .show();
         });
 
-        binding.progressingDialog.setOnClickListener(view -> {
-            LongDialog.newProgressingDialog(this)
+        binding.operatingDialog.setOnClickListener(view -> {
+            LongDialog.newOperatingDialog(this)
                     .create()
                     .show();
         });
 
-        binding.progressDialog.setOnClickListener(view -> {
-            ProgressDialog progressDialog =LongDialog.newProgressDialog(this)
+        binding.progressOperatingDialog.setOnClickListener(view -> {
+            ProgressOperatingDialog progressOperatingDialog =LongDialog.newProgressOperatingDialog(this)
                     .create()
                     .show();
             new Timer().schedule(new TimerTask() {
@@ -69,17 +69,17 @@ Android Dialog 库
                     if(progress > 10000){
                         cancel();
                     }
-                    if(progressDialog.getProgress() < 3000){
-                        progressDialog.updateText("开始...");
-                    }else if(progressDialog.getProgress() < 5000){
-                        progressDialog.updateText("进行中...");
-                    }else if(progressDialog.getProgress() < 7000){
-                        progressDialog.updateText("等待中...");
+                    if(progressOperatingDialog.getProgress() < 3000){
+                        progressOperatingDialog.updateText("开始...");
+                    }else if(progressOperatingDialog.getProgress() < 5000){
+                        progressOperatingDialog.updateText("进行中...");
+                    }else if(progressOperatingDialog.getProgress() < 7000){
+                        progressOperatingDialog.updateText("等待中...");
                     }else{
-                        progressDialog.updateText("即将结束");
+                        progressOperatingDialog.updateText("即将结束");
                     }
                     progress += 500;
-                    progressDialog.updateProgress(progress, 10000);
+                    progressOperatingDialog.updateProgress(progress, 10000);
                 }
             }, 0, 500);
         });
