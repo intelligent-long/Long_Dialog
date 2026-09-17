@@ -156,10 +156,17 @@ public class InputDialog extends BaseMessageDialog<InputDialog>{
                 ((ViewGroup) parent).setClipChildren(false);
                 parent = parent.getParent();
             }
+            boolean hasTitle = (title != null && title.length() > 0);
+            float decreaseMargin;
+            if(hasTitle) {
+                decreaseMargin = 30;
+            }else {
+                decreaseMargin = 15;
+            }
             ViewGroup.LayoutParams params = root.getLayoutParams();
             if (params instanceof ViewGroup.MarginLayoutParams) {
                 ViewGroup.MarginLayoutParams marginParams = (ViewGroup.MarginLayoutParams) params;
-                marginParams.topMargin = - UiUtil.dpToPx(context, 30);
+                marginParams.topMargin = -UiUtil.dpToPx(context, decreaseMargin);
                 root.setLayoutParams(marginParams);
             }
         }
