@@ -5,7 +5,7 @@ plugins {
 
 group = "com.longx.intelligent.android.lib.longdialog"
 version = "1.0"
-val manualBuildTime = "2026 年 9 月 1 日"
+val manualBuildTime = "2026 年 9 月 17 日"
 
 val generatedSourcesDir = layout.projectDirectory.dir("src/main/java")
 
