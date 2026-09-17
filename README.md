@@ -60,6 +60,7 @@ Android Dialog 库
 
         binding.progressOperatingDialog.setOnClickListener(view -> {
             ProgressOperatingDialog progressOperatingDialog =LongDialog.newProgressOperatingDialog(this)
+                    .title("进度弹窗")
                     .create()
                     .show();
             new Timer().schedule(new TimerTask() {
@@ -69,12 +70,15 @@ Android Dialog 库
                     if(progress > 10000){
                         cancel();
                     }
-                    if(progressOperatingDialog.getProgress() < 3000){
-                        progressOperatingDialog.updateText("开始...");
+                    if(progressOperatingDialog.getProgress() == 10000){
+                        progressOperatingDialog.updateText("已结束");
+                        progressOperatingDialog.updateTitle("已结束");
+                    }else if(progressOperatingDialog.getProgress() < 3000){
+                        progressOperatingDialog.updateText("开始");
                     }else if(progressOperatingDialog.getProgress() < 5000){
-                        progressOperatingDialog.updateText("进行中...");
+                        progressOperatingDialog.updateText("进行中");
                     }else if(progressOperatingDialog.getProgress() < 7000){
-                        progressOperatingDialog.updateText("等待中...");
+                        progressOperatingDialog.updateText("等待中");
                     }else{
                         progressOperatingDialog.updateText("即将结束");
                     }
@@ -88,7 +92,7 @@ Android Dialog 库
             InputDialog inputDialog = LongDialog.newInputDialog(this)
                     .icon(R.drawable.info_24px)
                     .title("输入弹窗")
-                    .message("这是一个输入弹窗。")
+                    .message("这是一个输入弹窗")
                     .cancelButtonText("取消")
                     .okButtonText("完成")
                     .hint("请输入内容");
@@ -106,9 +110,29 @@ Android Dialog 库
 
         binding.listDialog1.setOnClickListener(view -> {
             LongDialog.newListDialog(this)
-                    .message("这是一个列表弹窗。")
+                    .message("这是一个列表弹窗")
                     .items(new CharSequence[]{"选项1", "选项2"}, (dialogInterface, i) -> {
                         Toast.makeText(this, "点击了: " + i, Toast.LENGTH_SHORT).show();
+                    })
+                    .create()
+                    .show();
+        });
+
+        binding.listDialog2.setOnClickListener(view -> {
+            LongDialog.newListDialog(this)
+                    .title("列表弹窗")
+                    .message("这是一个列表弹窗")
+                    .singleChoiceItems(new CharSequence[]{"选项1", "选项2", "选项3"}, 0, (dialogInterface, i) -> {
+                        Toast.makeText(this, "点击了: " + i, Toast.LENGTH_SHORT).show();
+                    })
+                    .create()
+                    .show();
+        });
+
+        binding.listDialog3.setOnClickListener(view -> {
+            LongDialog.newListDialog(this)
+                    .multiChoiceItems(new CharSequence[]{"选项1", "选项2", "选项3"}, new boolean[]{true, false, true}, (dialogInterface, i, b) -> {
+                        Toast.makeText(this, "点击了: " + i + " : " + b, Toast.LENGTH_SHORT).show();
                     })
                     .create()
                     .show();
