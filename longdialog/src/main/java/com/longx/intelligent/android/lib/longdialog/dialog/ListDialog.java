@@ -238,8 +238,8 @@ public class ListDialog extends BaseMessageDialog<ListDialog> {
                             }
                         }
                         int paddingHorizontal = UiUtil.dpToPx(this.context, 24f);
-                        int paddingTop = hasNoTitleAndIcon ? UiUtil.dpToPx(this.context, 9.6f) : 0;
-                        int paddingBottom = UiUtil.dpToPx(this.context, 7f);
+                        int paddingTop = hasNoTitleAndIcon ? UiUtil.dpToPx(this.context, 9.6f) : UiUtil.dpToPx(this.context, 3f);
+                        int paddingBottom = UiUtil.dpToPx(this.context, 10f);
                         messageView.setPadding(paddingHorizontal, paddingTop, paddingHorizontal, paddingBottom);
                     } else {
                         TypedValue textAppearanceAttr = ResourceUtil.getAttr(context, com.google.android.material.R.attr.textAppearanceBodyMedium);
@@ -262,7 +262,7 @@ public class ListDialog extends BaseMessageDialog<ListDialog> {
                         }
                         int paddingHorizontal = UiUtil.dpToPx(this.context, 24.2f);
                         int paddingTop = hasNoTitleAndIcon ? UiUtil.dpToPx(this.context, 9.6f) : 0;
-                        int paddingBottom = UiUtil.dpToPx(this.context, 7f);
+                        int paddingBottom = UiUtil.dpToPx(this.context, 13f);
                         messageView.setPadding(paddingHorizontal, paddingTop, paddingHorizontal, paddingBottom);
                     }
                     messageView.setGravity(centered ? Gravity.CENTER : Gravity.START);
