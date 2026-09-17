@@ -161,7 +161,7 @@ public class InputDialog extends BaseMessageDialog<InputDialog>{
             if(hasTitle) {
                 decreaseMargin = 30;
             }else {
-                decreaseMargin = 15;
+                decreaseMargin = 14.3f;
             }
             ViewGroup.LayoutParams params = root.getLayoutParams();
             if (params instanceof ViewGroup.MarginLayoutParams) {
