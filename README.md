@@ -3,7 +3,7 @@ Android Dialog 库
 
 # 特性
 1. 提供基础弹窗
-2. 支持 Material 2 \ Material 3 主题
+2. 支持 **Material 2 \ Material 3** 主题
 
 # 弹窗类型
 1. 消息弹窗
